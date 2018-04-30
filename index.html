@@ -20,21 +20,62 @@
 </head>
 <body>
 	<div class="wrap">
-		<div class="header">
-			<h1><a class="title" href="#">Shopping cart test</a></h1>
-			<a href="#" title="購物車"><i class="fas fa-shopping-cart cart"></i></a>		
+		<div id="header">
+			<h1><a v-on:click.prevent="" v-bind:class="{title: classStatus.hoverOn}" href="#">Shopping cart test</a></h1>
+			<a v-on:click.prevent="clickShoppingCart" href="#" title="購物車"><i class="fas fa-shopping-cart" v-bind:class="{cart: classStatus.hoverOn}"></i><span v-if="number > 0">{{number}}</span></a>		
 		</div>
-		<div class="content">
-			<ul class="classification">
-				<li class="classificationName">Phone</li>
-				<li class="classificationName">Notebook</li>
+		<div id="content">
+			<ul class="classification" v-if="judgment.productOn">
+				<li v-bind:class="{classificationHover: classStatus.hoverOn, touchColor: classStatus.phoneOn}" v-on:click="clickPhone">Phone</li>
+				<li v-bind:class="{classificationHover: classStatus.hoverOn, touchColor: classStatus.notebookOn}" v-on:click="clickNotebook">Notebook</li>
 			</ul>
-			<ul class="productlist"></ul>
+			<ul class="productList" v-if="judgment.listButtom && judgment.productOn">
+				<li class="list" v-for="item in product[0]" v-bind:class="{listHover: classStatus.hoverOn}" v-bind:data-num="item['No.']" v-on:click="clickList">
+					<ul>
+						<li class="productImg" v-bind:style="{'background-image': 'url(' + item.img + ')'}"></li>
+						<li>{{item['產品名稱']}}</li>
+						<li class="productPrice">{{item['價格區間']}}</li>						
+					</ul>
+				</li>
+			</ul>
+			<div class="productDetail" v-if="judgment.detailButtom && judgment.productOn">
+				<ul>
+					<li class="detailImg" v-bind:style="{'background-image': 'url(' + product[0].img + ')'}"></li>
+					<li class="inputCart" v-if="judgment.inputCartButtom" v-bind:class="{inputCartHover: classStatus.hoverOn}" v-on:click="clickInputCart">放入購物車</li>
+					<li class="alreadyShopping" v-if="judgment.alreadyShoppingButtom">已加入購物車</li>
+					<li>{{product[0]['產品名稱']}}</li>
+					<li>{{product[0]['價格區間']}}</li>						
+					<ul class="productspec">
+						<li v-for="spec in product[0]['規格']">{{spec}}</li>
+					</ul>
+				</ul>
+			</div>
+			<ul class="cartContent" v-if="judgment.shoppingCartOn">
+				<li v-for="item in shoppingCart">
+					<ul class="cartTitle">
+						<li class="cartTitleName">商品</li>
+						<li class="cartTitlePrice">單價</li>
+						<li class="cartTitleNumber">數量</li>
+						<li class="cartTitleTotal">小計</li>
+					</ul>
+					<ul class="cartProduct">
+						<li class="cartContentImg" v-bind:style="{'background-image': 'url(' + item.img + ')'}"></li>
+						<li class="cartProductName">{{item['產品名稱']}}</li>
+						<li class="cartProductPrice">{{item['價格區間']}}</li>
+						<li></li>						
+						<li></li>
+					</ul>
+				</li>
+				<li class="cartTotalPrice">
+
+				</li>
+			</ul>
 		</div>
-		<div class="footer">
+		<div id="footer">
 			<p>Copyright © Gavin Hsu All rights reserved.</p>
 		</div>
 	</div>
+	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
 	<script src="js/all.js"></script>
 </body>
 </html>

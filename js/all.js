@@ -6,7 +6,7 @@ const productdata = {
 				"No.": "1",
 				"img": "img/phone/HTCUUltra64G574GB64GB.jpg",
 				"產品名稱": "HTC U Ultra 64G 5.7吋 雙螢幕雙卡智慧機(4GB  64GB)",
-				"價格區間": "$6,250~$23,900",
+				"價格": "$6,250",
 				"規格": 
 					[
 						"5.7 吋大小雙螢幕",
@@ -21,7 +21,7 @@ const productdata = {
 				"No.": "2",
 				"img": "img/phone/SAMSUNGGalaxyS84G64G5.8吋防水旗艦機.jpg",
 				"產品名稱": "SAMSUNG Galaxy S8 (4G64G) 5.8吋 防水旗艦機",
-				"價格區間": "$13,699~$29,850",
+				"價格": "$13,699",
 				"規格": 
 					[
 						"(4G/64G) 5.8吋 近乎無邊的曲面設計",
@@ -35,7 +35,7 @@ const productdata = {
 				"No.": "3",
 				"img": "img/phone/紅米Note4X5.5吋多彩金屬八核心智慧型手機小米.jpg",
 				"產品名稱": "紅米Note 4X 5.5吋 多彩金屬 八核心 智慧型手機 小米",
-				"價格區間": "$4,700~$6,590",
+				"價格": "$4,700",
 				"規格": 
 					[
 						"5.5 吋多彩金屬機身",
@@ -47,7 +47,7 @@ const productdata = {
 				"No.": "4",
 				"img": "img/phone/AppleiPhone864GB智慧手機.jpg",
 				"產品名稱": "Apple iPhone 8 64GB 智慧手機",
-				"價格區間": "$20,000~$42,500",
+				"價格": "$20,000",
 				"規格": 
 					[
 						"4.7吋Retina HD顯示器",
@@ -62,7 +62,7 @@ const productdata = {
 				"No.": "5",
 				"img": "img/phone/HTCU116G128G版5.5吋防水雙卡機.jpg",
 				"產品名稱": "HTC U11 6G128G版 5.5吋防水雙卡機",
-				"價格區間": "$10,490~$22,700",
+				"價格": "$10,490",
 				"規格": 
 					[
 						"作業系統與版本 Android 7.1",
@@ -79,7 +79,7 @@ const productdata = {
 				"No.": "6",
 				"img": "img/phone/SamsungGalaxyJ7Pro.jpg",
 				"產品名稱": "Samsung Galaxy J7 Pro",
-				"價格區間": "$5,500~$9,990",
+				"價格": "$5,500",
 				"規格": 
 					[
 						"★全金屬機身，相機鏡頭平整，背蓋零外凸",
@@ -93,7 +93,7 @@ const productdata = {
 				"No.": "7",
 				"img": "img/phone/SamsungGalaxyNote86G64G6.3吋雙卡智慧機皇.jpg",
 				"產品名稱": "Samsung Galaxy Note 8 (6G64G) 6.3 吋雙卡智慧機皇",
-				"價格區間": "$19,900~$53,990",
+				"價格": "$19,900",
 				"規格": 
 					[
 						"登錄送原廠延長保固一年",
@@ -107,7 +107,7 @@ const productdata = {
 				"No.": "8",
 				"img": "img/phone/HTCU11Plus4G64G&6G128G.jpg",
 				"產品名稱": "HTC U11 Plus 4G/64G & 6G/128G",
-				"價格區間": "$12,900~$21,900",
+				"價格": "$12,900",
 				"規格": 
 					[
 						"★6 吋 Quad HD 顯示 18:9寬螢幕",
@@ -121,7 +121,7 @@ const productdata = {
 				"No.": "9",
 				"img": "img/phone/OPPOA57CPH17013GB23GB.jpg",
 				"產品名稱": "OPPO A57(CPH1701) 3GB23GB",
-				"價格區間": "$4,690~$8,990",
+				"價格": "$4,690",
 				"規格": 
 					[
 						"★1600萬畫素美顏自拍",
@@ -141,7 +141,7 @@ const productdata = {
 				"No.": "1",
 				"img": "img/notebook/ASUS華碩15.6吋電競筆電i77700HQ8G1TBGTX10504G.jpg",
 				"產品名稱": "ASUS華碩 15.6吋電競筆電 i7-7700HQ8G1TBGTX1050-4G ",
-				"價格區間": "$24,888~$38,900",
+				"價格": "$24,888",
 				"規格": 
 					[
 						"Intel i7-7700HQ處理器",
@@ -153,7 +153,7 @@ const productdata = {
 				"No.": "2",
 				"img": "img/notebook/AppleMacBookAir13.3吋1.68G128GFlashMMGF2TAA.jpg",
 				"產品名稱": "【Apple】 MacBook Air 13.3吋 1.68G128G Flash(MMGF2TAA)",
-				"價格區間": "$40,390~$44,800",
+				"價格": "$40,390",
 				"規格": 
 					[
 						"◎★處理器 1.6GHz 雙核心 Intel Core i5",
@@ -165,7 +165,7 @@ const productdata = {
 				"No.": "3",
 				"img": "img/notebook/LenovoYogaBookZA150073TW10.1吋二合一平板筆電.jpg",
 				"產品名稱": "Lenovo Yoga Book ZA150073TW 10.1吋 二合一平板筆電",
-				"價格區間": "$12,880~$17,900",
+				"價格": "$12,880",
 				"規格": 
 					[
 						"極致纖薄。時尚設計",
@@ -181,7 +181,7 @@ const productdata = {
 				"No.": "4",
 				"img": "img/notebook/MicrosoftSurfacePro48Gi5256G.jpg",
 				"產品名稱": "Microsoft Surface Pro 4 8G/i5-256G",
-				"價格區間": "$28,400~$52,118",
+				"價格": "$28,400",
 				"規格": 
 					[
 						"處理器：Intel® 第6代Core™ i5",
@@ -207,7 +207,7 @@ const productdata = {
 				"No.": "5",
 				"img": "img/notebook/ASUS華碩10吋觸控平板筆電Z83504G64GT102HA.jpg",
 				"產品名稱": "ASUS華碩 10吋觸控平板筆電 Z83504G64G (T102HA)",
-				"價格區間": "$11,000~$15,423",
+				"價格": "$11,000",
 				"規格": 
 					[
 						"最新四核Intel Trail",
@@ -219,7 +219,7 @@ const productdata = {
 				"No.": "6",
 				"img": "img/notebook/ASUS華碩14吋筆電i57200U4G256GSSD940MX2GUX410UQ.jpg",
 				"產品名稱": "ASUS華碩 14吋筆電 i5-7200U4G256G SSD940MX-2G (UX410UQ)",
-				"價格區間": "$24,999~$35,900",
+				"價格": "$24,999",
 				"規格": 
 					[
 						"Intel i5-7200U處理器",
@@ -231,7 +231,7 @@ const productdata = {
 				"No.": "7",
 				"img": "img/notebook/LenovoIdeaPadY52015.6吋電競筆電.jpg",
 				"產品名稱": "Lenovo IdeaPad Y520 15.6吋電競筆電",
-				"價格區間": "$23,900~$43,900",
+				"價格": "$23,900",
 				"規格": 
 					[
 						"●網路功能：100/1000M",
@@ -250,7 +250,7 @@ const productdata = {
 				"No.": "8",
 				"img": "img/notebook/ASUS華碩筆記型電腦X556UR15.6吋.jpg",
 				"產品名稱": "ASUS華碩 筆記型電腦 X556UR 15.6吋",
-				"價格區間": "$16,800~$25,056",
+				"價格": "$16,800",
 				"規格": 
 					[
 						"配備USB 3.1 type-C 正反皆可插",
@@ -264,7 +264,7 @@ const productdata = {
 				"No.": "9",
 				"img": "img/notebook/ASUSE203NA0051EN335011.6吋小筆電.jpg",
 				"產品名稱": "ASUS E203NA-0051EN3350 11.6吋小筆電",
-				"價格區間": "$6,790~$8,846",
+				"價格": "$6,790",
 				"規格": 
 					[
 						"Intel 雙核 Celeron® N3350",
@@ -318,7 +318,6 @@ let vmContent = new Vue({
 			vmContent.classStatus.notebookOn = true;
 			vmContent.judgment.listButtom = true;
 			vmContent.judgment.detailButtom = false;
-
 		},
 		// 點選商品顯示詳細內容
 		clickList: function(e){
@@ -351,9 +350,24 @@ let vmContent = new Vue({
 			vmContent.shoppingCart.push(vmContent.product[0]);
 			localStorage.setItem("shoppingCartRecord", JSON.stringify(vmContent.shoppingCart));
 		},
+		// 更換顯示內容 產品列表 → 購物列表
 		changePage: function(e){
 			vmContent.judgment.productOn = false;
 			vmContent.judgment.shoppingCartOn = true;
+		},
+		// 點擊減少(-)按鈕，數量減1
+		clickReduce: function(e){
+			let shoppingNumber = e.currentTarget.nextElementSibling;
+			if (shoppingNumber.value > 1){
+				shoppingNumber.value--;
+			}
+		},
+		// 點擊增加(+)按鈕，數量加1
+		clickIncrease: function(e){
+			let shoppingNumber = e.currentTarget.previousElementSibling;
+			if (shoppingNumber.value < 100){
+				shoppingNumber.value++;
+			}
 		}
 	}
 });

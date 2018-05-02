@@ -274,28 +274,43 @@ a{
 	width: 465px;
 }
 .cartTitlePrice{
-	width: 250px;
+	width: 150px;
+}
+.cartTitleNumber{
+	width: 150px;
 }
 .cartProduct{
 	display: flex;
 }
 .cartProduct li{
 	margin-right: 15px;
+	width: 150px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.cartContentImg{
+.cartProduct .cartContentImg{
 	width: 150px;
 	height: 150px;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.cartProductName{
+.cartProduct .cartProductName{
 	width: 300px;
 }
-.cartProductPrice{
-	width: 250px;
+.cartProduct .cartProductPrice{
+	width: 150px;
+}
+.number{
+	width: 90px;
+	padding-left: 15px;
+	text-align: center;
+}
+.cartProduct input[value="-"]{
+	transform: translateX(20px);
+}
+.cartProduct input[value="+"]{
+	transform: translateX(-20px);
 }
 /*待整理*/
 

@@ -34,7 +34,7 @@
 					<ul>
 						<li class="productImg" v-bind:style="{'background-image': 'url(' + item.img + ')'}"></li>
 						<li>{{item['產品名稱']}}</li>
-						<li class="productPrice">{{item['價格區間']}}</li>						
+						<li class="productPrice">{{item['價格']}}</li>						
 					</ul>
 				</li>
 			</ul>
@@ -44,7 +44,7 @@
 					<li class="inputCart" v-if="judgment.inputCartButtom" v-bind:class="{inputCartHover: classStatus.hoverOn}" v-on:click="clickInputCart">放入購物車</li>
 					<li class="alreadyShopping" v-if="judgment.alreadyShoppingButtom">已加入購物車</li>
 					<li>{{product[0]['產品名稱']}}</li>
-					<li>{{product[0]['價格區間']}}</li>						
+					<li>{{product[0]['價格']}}</li>						
 					<ul class="productspec">
 						<li v-for="spec in product[0]['規格']">{{spec}}</li>
 					</ul>
@@ -61,8 +61,12 @@
 					<ul class="cartProduct">
 						<li class="cartContentImg" v-bind:style="{'background-image': 'url(' + item.img + ')'}"></li>
 						<li class="cartProductName">{{item['產品名稱']}}</li>
-						<li class="cartProductPrice">{{item['價格區間']}}</li>
-						<li></li>						
+						<li class="cartProductPrice">{{item['價格']}}</li>
+						<li>
+							<input type="button" title="減少" value="-" v-on:click="clickReduce">
+							<input class="number" type="number" value="1" min="1" max="100" step="1">
+							<input type="button" title="增加" value="+" v-on:click="clickIncrease">
+						</li>						
 						<li></li>
 					</ul>
 				</li>

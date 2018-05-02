@@ -288,6 +288,7 @@ let vmContent = new Vue({
 	data: {
 		product: [productdata.phone, productdata.notebook],
 		shoppingCart: JSON.parse(localStorage.getItem("shoppingCartRecord")) || [],
+		shoppingNumber: JSON.parse(localStorage.getItem("shoppingNumberRecord")) || [],
 		classStatus: {
 			hoverOn: true,
 			phoneOn: true,
@@ -300,6 +301,12 @@ let vmContent = new Vue({
 			detailButtom: false,
 			inputCartButtom: true,
 			alreadyShoppingButtom: false
+		}
+	},
+	Filters: {
+		priceFormat: function(value){
+			let price = value.slice(1);
+			return parseInt(price.slice(-11, -8) + price.slice(-7, -4) + price.slice(-3));
 		}
 	},
 	methods: {
@@ -348,7 +355,9 @@ let vmContent = new Vue({
 			vmContent.judgment.alreadyShoppingButtom = true;
 			vmCart.InputCart();
 			vmContent.shoppingCart.push(vmContent.product[0]);
+			vmContent.shoppingNumber.push(1);
 			localStorage.setItem("shoppingCartRecord", JSON.stringify(vmContent.shoppingCart));
+			localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
 		},
 		// 更換顯示內容 產品列表 → 購物列表
 		changePage: function(e){
@@ -357,18 +366,24 @@ let vmContent = new Vue({
 		},
 		// 點擊減少(-)按鈕，數量減1
 		clickReduce: function(e){
-			let shoppingNumber = e.currentTarget.nextElementSibling;
-			if (shoppingNumber.value > 1){
-				shoppingNumber.value--;
+			const index = e.currentTarget.nextElementSibling.dataset.index;
+			let inputNumber = e.currentTarget.nextElementSibling;
+			if (vmContent.shoppingNumber[index] > 1){
+				vmContent.shoppingNumber[index]--;
+				inputNumber.value--;
+				localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
 			}
 		},
 		// 點擊增加(+)按鈕，數量加1
 		clickIncrease: function(e){
-			let shoppingNumber = e.currentTarget.previousElementSibling;
-			if (shoppingNumber.value < 100){
-				shoppingNumber.value++;
+			const index = e.currentTarget.previousElementSibling.dataset.index;
+			let inputNumber = e.currentTarget.previousElementSibling;
+			if (vmContent.shoppingNumber[index] < 100){
+				vmContent.shoppingNumber[index]++;
+				inputNumber.value++;
+				localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
 			}
-		}
+		},
 	}
 });
 	// 購物車記數

@@ -279,6 +279,9 @@ a{
 .cartTitleNumber{
 	width: 150px;
 }
+.cartTitleTotal{
+	width: 175px;
+}
 .cartProduct{
 	display: flex;
 }
@@ -311,6 +314,9 @@ a{
 }
 .cartProduct input[value="+"]{
 	transform: translateX(-20px);
+}
+.cartProduct .cartSubtotal{
+	width: 175px;
 }
 /*待整理*/
 

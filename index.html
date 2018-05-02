@@ -51,7 +51,7 @@
 				</ul>
 			</div>
 			<ul class="cartContent" v-if="judgment.shoppingCartOn">
-				<li v-for="item in shoppingCart">
+				<li v-for="(item, index) in shoppingCart">
 					<ul class="cartTitle">
 						<li class="cartTitleName">商品</li>
 						<li class="cartTitlePrice">單價</li>
@@ -64,10 +64,11 @@
 						<li class="cartProductPrice">{{item['價格']}}</li>
 						<li>
 							<input type="button" title="減少" value="-" v-on:click="clickReduce">
-							<input class="number" type="number" value="1" min="1" max="100" step="1">
+							<input class="number" type="number" min="1" max="100" step="1" v-bind:data-index="index" v-model="shoppingNumber[index]">
 							<input type="button" title="增加" value="+" v-on:click="clickIncrease">
 						</li>						
-						<li></li>
+						<!-- <li class="cartSubtotal">{{ item['價格'] | priceFormat }}</li> -->
+						<li class="cartSubtotal">{{ item['價格'] | priceFormat }}</li>
 					</ul>
 				</li>
 				<li class="cartTotalPrice">

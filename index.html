@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/all.css">	
 </head>
 <body>
+	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
 	<div class="wrap">
 		<div id="header">
 			<h1><a v-on:click.prevent="" v-bind:class="{title: classStatus.hoverOn}" href="#">Shopping cart test</a></h1>
@@ -67,8 +68,7 @@
 							<input class="number" type="number" min="1" max="100" step="1" v-bind:data-index="index" v-model="shoppingNumber[index]">
 							<input type="button" title="增加" value="+" v-on:click="clickIncrease">
 						</li>						
-						<!-- <li class="cartSubtotal">{{ item['價格'] | priceFormat }}</li> -->
-						<li class="cartSubtotal">{{ item['價格'] | priceFormat }}</li>
+						<li class="cartSubtotal">{{count(index)}}</li>
 					</ul>
 				</li>
 				<li class="cartTotalPrice">
@@ -80,7 +80,6 @@
 			<p>Copyright © Gavin Hsu All rights reserved.</p>
 		</div>
 	</div>
-	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
 	<script src="js/all.js"></script>
 </body>
 </html>

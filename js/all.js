@@ -303,87 +303,93 @@ let vmContent = new Vue({
 			alreadyShoppingButtom: false
 		}
 	},
-	Filters: {
-		priceFormat: function(value){
-			let price = value.slice(1);
-			return parseInt(price.slice(-11, -8) + price.slice(-7, -4) + price.slice(-3));
-		}
-	},
 	methods: {
 		// 點選分類更改商品顯示內容
 		clickPhone: function(e){
-			vmContent.product.splice(0, 2, productdata.phone);
-			vmContent.classStatus.phoneOn = true;
-			vmContent.classStatus.notebookOn = false;
-			vmContent.judgment.listButtom = true;
-			vmContent.judgment.detailButtom = false;
+			this.product.splice(0, 2, productdata.phone);
+			this.classStatus.phoneOn = true;
+			this.classStatus.notebookOn = false;
+			this.judgment.listButtom = true;
+			this.judgment.detailButtom = false;
 		},
 		// 點選分類更改商品顯示內容
 		clickNotebook: function(e){
-			vmContent.product.splice(0, 2, productdata.notebook);
-			vmContent.classStatus.phoneOn = false;
-			vmContent.classStatus.notebookOn = true;
-			vmContent.judgment.listButtom = true;
-			vmContent.judgment.detailButtom = false;
+			this.product.splice(0, 2, productdata.notebook);
+			this.classStatus.phoneOn = false;
+			this.classStatus.notebookOn = true;
+			this.judgment.listButtom = true;
+			this.judgment.detailButtom = false;
 		},
 		// 點選商品顯示詳細內容
 		clickList: function(e){
 			const number = e.currentTarget.dataset.num - 1;
-			let Len = vmContent.shoppingCart.length;
-			switch (vmContent.product[0]){
+			let Len = this.shoppingCart.length;
+			switch (this.product[0]){
 				case productdata.phone:
-					vmContent.product.splice(0, 2, productdata.phone[number]);
+					this.product.splice(0, 2, productdata.phone[number]);
 					break;
 				case productdata.notebook:
-					vmContent.product.splice(0, 2, productdata.notebook[number]);
+					this.product.splice(0, 2, productdata.notebook[number]);
 					break;
 			}
-			vmContent.judgment.listButtom = false;
-			vmContent.judgment.detailButtom = true;
-			vmContent.judgment.inputCartButtom = true;
-			vmContent.judgment.alreadyShoppingButtom = false;
+			this.judgment.listButtom = false;
+			this.judgment.detailButtom = true;
+			this.judgment.inputCartButtom = true;
+			this.judgment.alreadyShoppingButtom = false;
 			for (let i = 0; i < Len; i++){
-				if (vmContent.shoppingCart[i]['No.'] === vmContent.product[0]['No.'] && vmContent.shoppingCart[i]['產品名稱'] === vmContent.product[0]['產品名稱']){
-				vmContent.judgment.inputCartButtom = false;
-				vmContent.judgment.alreadyShoppingButtom = true;
+				if (this.shoppingCart[i]['No.'] === this.product[0]['No.'] && this.shoppingCart[i]['產品名稱'] === this.product[0]['產品名稱']){
+				this.judgment.inputCartButtom = false;
+				this.judgment.alreadyShoppingButtom = true;
 				}
 			}
 		},
 		// 點擊加入購物車按鈕
 		clickInputCart: function(e){
-			vmContent.judgment.inputCartButtom = false;
-			vmContent.judgment.alreadyShoppingButtom = true;
+			this.judgment.inputCartButtom = false;
+			this.judgment.alreadyShoppingButtom = true;
 			vmCart.InputCart();
-			vmContent.shoppingCart.push(vmContent.product[0]);
-			vmContent.shoppingNumber.push(1);
-			localStorage.setItem("shoppingCartRecord", JSON.stringify(vmContent.shoppingCart));
-			localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
+			this.shoppingCart.push(this.product[0]);
+			this.shoppingNumber.push(1);
+			localStorage.setItem("shoppingCartRecord", JSON.stringify(this.shoppingCart));
+			localStorage.setItem("shoppingNumberRecord", JSON.stringify(this.shoppingNumber));
 		},
 		// 更換顯示內容 產品列表 → 購物列表
 		changePage: function(e){
-			vmContent.judgment.productOn = false;
-			vmContent.judgment.shoppingCartOn = true;
+			this.judgment.productOn = false;
+			this.judgment.shoppingCartOn = true;
 		},
 		// 點擊減少(-)按鈕，數量減1
 		clickReduce: function(e){
 			const index = e.currentTarget.nextElementSibling.dataset.index;
 			let inputNumber = e.currentTarget.nextElementSibling;
-			if (vmContent.shoppingNumber[index] > 1){
-				vmContent.shoppingNumber[index]--;
+			if (this.shoppingNumber[index] > 1){
+				this.shoppingNumber[index]--;
 				inputNumber.value--;
-				localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
+				localStorage.setItem("shoppingNumberRecord", JSON.stringify(this.shoppingNumber));
 			}
 		},
 		// 點擊增加(+)按鈕，數量加1
 		clickIncrease: function(e){
 			const index = e.currentTarget.previousElementSibling.dataset.index;
 			let inputNumber = e.currentTarget.previousElementSibling;
-			if (vmContent.shoppingNumber[index] < 100){
-				vmContent.shoppingNumber[index]++;
+			if (this.shoppingNumber[index] < 100){
+				this.shoppingNumber[index]++;
 				inputNumber.value++;
-				localStorage.setItem("shoppingNumberRecord", JSON.stringify(vmContent.shoppingNumber));
+				localStorage.setItem("shoppingNumberRecord", JSON.stringify(this.shoppingNumber));
 			}
+			this.count(index);
 		},
+
+		
+		// 依數量計算採購小計
+		count: function(number){
+			console.log(number);
+			const price = this.shoppingCart[number]['價格'].slice(1);
+			const priceNumber = parseInt(price.slice(-11, -8) + price.slice(-7, -4) + price.slice(-3));
+			const cartNumber = this.shoppingNumber[number];
+			const SubtotalPrice = priceNumber * cartNumber;
+			return SubtotalPrice;
+		}
 	}
 });
 	// 購物車記數

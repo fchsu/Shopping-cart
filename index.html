@@ -23,28 +23,28 @@
 		<div id="header">
 			<h1>
 				<a v-on:click.prevent=""
-						v-bind:class="{title: classStatus.hoverOn}"
-						href="#">Shopping cart test</a>
+					v-bind:class="{title: classStatus.hoverOn}"
+					href="#">Shopping cart test</a>
 			</h1>
 			<a v-on:click.prevent="clickShoppingCart"
-					href="#" title="購物車">
+				href="#" title="購物車">
 				<i class="fas fa-shopping-cart"
-						v-bind:class="{cart: classStatus.hoverOn}"></i>
+					v-bind:class="{cart: classStatus.hoverOn}"></i>
 				<span v-if="number > 0">{{number}}</span>
 			</a>		
 		</div>
 		<div id="content">
 			<ul class="classification" v-if="judgment.productOn">
 				<li v-bind:class="{classificationHover: classStatus.hoverOn, touchColor: classStatus.phoneOn}"
-						v-on:click="clickPhone">Phone</li>
+					v-on:click="clickPhone">Phone</li>
 				<li v-bind:class="{classificationHover: classStatus.hoverOn, touchColor: classStatus.notebookOn}"
-						v-on:click="clickNotebook">Notebook</li>
+					v-on:click="clickNotebook">Notebook</li>
 			</ul>
 			<ul class="productList" v-if="judgment.listButtom && judgment.productOn">
 				<li class="list"
-						v-for="(item, index) in product[0]"
-						v-bind:class="{listHover: classStatus.hoverOn}"
-						v-on:click="clickList(index)">
+					v-for="(item, index) in product[0]"
+					v-bind:class="{listHover: classStatus.hoverOn}"
+					v-on:click="clickList(index)">
 					<ul>
 						<li class="productImg" v-bind:style="{'background-image': 'url(' + item.img + ')'}"></li>
 						<li>{{item['產品名稱']}}</li>
@@ -56,9 +56,9 @@
 				<ul>
 					<li class="detailImg" v-bind:style="{'background-image': 'url(' + product[0].img + ')'}"></li>
 					<li class="inputCart"
-							v-if="judgment.inputCartButtom"
-							v-bind:class="{inputCartHover: classStatus.hoverOn}"
-							v-on:click="clickInputCart">放入購物車</li>
+						v-if="judgment.inputCartButtom"
+						v-bind:class="{inputCartHover: classStatus.hoverOn}"
+						v-on:click="clickInputCart">放入購物車</li>
 					<li class="alreadyShopping" v-if="judgment.alreadyShoppingButtom">已加入購物車</li>
 					<li>{{product[0]['產品名稱']}}</li>
 					<li>{{product[0]['價格']}}</li>						
@@ -80,11 +80,10 @@
 						<li class="cartProductName">{{item['產品名稱']}}</li>
 						<li class="cartProductPrice">{{item['價格']}}</li>
 						<li>
-							<input type="button" title="減少" value="-" v-on:click="clickReduce">
+							<input type="button" title="減少" value="-" v-on:click="clickReduce(index, $event)">
 							<input class="number" type="number" min="1" max="100" step="1"
-									v-bind:data-index="index"
-									v-model="shoppingNumber[index]">
-							<input type="button" title="增加" value="+" v-on:click="clickIncrease">
+								v-model="shoppingNumber[index]">
+							<input type="button" title="增加" value="+" v-on:click="clickIncrease(index, $event)">
 						</li>						
 						<li class="cartSubtotal">{{count(index)}}</li>
 					</ul>

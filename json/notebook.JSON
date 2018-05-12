@@ -1,0 +1,137 @@
+		[
+			{
+				"No.": "1",
+				"img": "img/notebook/ASUS華碩15.6吋電競筆電i77700HQ8G1TBGTX10504G.jpg",
+				"產品名稱": "ASUS華碩 15.6吋電競筆電 i7-7700HQ8G1TBGTX1050-4G ",
+				"價格": "$24,888",
+				"規格": 
+					[
+						"Intel i7-7700HQ處理器",
+						"1TB硬碟(7200轉)",
+						"NVIDIA GTX1050 4G獨顯"
+					]
+			},
+			{
+				"No.": "2",
+				"img": "img/notebook/AppleMacBookAir13.3吋1.68G128GFlashMMGF2TAA.jpg",
+				"產品名稱": "【Apple】 MacBook Air 13.3吋 1.68G128G Flash(MMGF2TAA)",
+				"價格": "$40,390",
+				"規格": 
+					[
+						"◎★處理器 1.6GHz 雙核心 Intel Core i5",
+						"◎★ 8GB 記憶體 / 128GB 快閃儲存",
+						"◎★作業系統 OS X Yosemite"
+					]
+			},
+			{
+				"No.": "3",
+				"img": "img/notebook/LenovoYogaBookZA150073TW10.1吋二合一平板筆電.jpg",
+				"產品名稱": "Lenovo Yoga Book ZA150073TW 10.1吋 二合一平板筆電",
+				"價格": "$12,880",
+				"規格": 
+					[
+						"極致纖薄。時尚設計",
+						"■處理器：Intel Atom x5-Z8550四核心",
+						"■記憶體：4 GB",
+						"■硬碟：64 GB",
+						"■螢幕：10.1 吋 FHD IPS(1920 x 1200)",
+						"■作業系統：Windows 10 家用版",
+						"■二合一平板電腦"
+					]
+			},
+			{
+				"No.": "4",
+				"img": "img/notebook/MicrosoftSurfacePro48Gi5256G.jpg",
+				"產品名稱": "Microsoft Surface Pro 4 8G/i5-256G",
+				"價格": "$28,400",
+				"規格": 
+					[
+						"處理器：Intel® 第6代Core™ i5",
+						"記憶體：8 GB RAM",
+						"儲存容量：256GB SSD",
+						"重量：786G",
+						"作業系統：Windows 10 Pro",
+						"圖形晶片：Intel® HD Graphics",
+						"螢幕：12.3吋 PixelSense顯示器",
+						"解析度：2736x1824 (267PPI)",
+						"外觀比例：3：2",
+						"觸控：10點多點觸控",
+						"光碟機：無",
+						"連接阜：全尺寸USB 3.0/Micro SD讀卡機/耳機插孔/Mini DisplayPort/保護蓋連接阜/SurfaceConnect",
+						"無線網路：802.11ac WiFi無線網路 相容802.11a/b/g/n Bluetooth4.0無線技術",
+						"感應器：週遭環境光感應器/加速計/陀螺儀",
+						"相機/視訊/音訊：5百萬像素前方HD相機 8百萬像素後方自動對焦相機，配備1080p HD視訊錄製功能 立體聲麥克風 具備Dolbu音效的立體聲喇叭",
+						"電池續航力：播放視訊可達9小時",
+						"安全性：支援企業安全性的TPM晶片"
+					]
+			},
+			{
+				"No.": "5",
+				"img": "img/notebook/ASUS華碩10吋觸控平板筆電Z83504G64GT102HA.jpg",
+				"產品名稱": "ASUS華碩 10吋觸控平板筆電 Z83504G64G (T102HA)",
+				"價格": "$11,000",
+				"規格": 
+					[
+						"最新四核Intel Trail",
+						"輕薄變形二合一，790g",
+						"USB 3.1 C 型連接埠"
+					]
+			},
+			{
+				"No.": "6",
+				"img": "img/notebook/ASUS華碩14吋筆電i57200U4G256GSSD940MX2GUX410UQ.jpg",
+				"產品名稱": "ASUS華碩 14吋筆電 i5-7200U4G256G SSD940MX-2G (UX410UQ)",
+				"價格": "$24,999",
+				"規格": 
+					[
+						"Intel i5-7200U處理器",
+						"4G記憶體 / 256G SSD",
+						"NVIDIA 940MX 2G獨顯"
+					]
+			},
+			{
+				"No.": "7",
+				"img": "img/notebook/LenovoIdeaPadY52015.6吋電競筆電.jpg",
+				"產品名稱": "Lenovo IdeaPad Y520 15.6吋電競筆電",
+				"價格": "$23,900",
+				"規格": 
+					[
+						"●網路功能：100/1000M",
+						"●無線網路：802.11 AC",
+						"●藍芽：支援 BT 4.1",
+						"●視訊：720P HD",
+						"●音效：2.0 Harman 雙立體喇叭",
+						"●連接埠：1xUSB 2.0、2xUSB 3.0、1xType C",
+						"●讀卡機：四合一讀卡機 (SD/SDHC/SDXC/MMC)",
+						"●電池容量：3 Cell (45Wh) / 4hr",
+						"●尺寸：約 2.4 Kg",
+						"●重量：約 380 x 265 x 25.8 mm (W x D x H)"
+					]
+			},
+			{
+				"No.": "8",
+				"img": "img/notebook/ASUS華碩筆記型電腦X556UR15.6吋.jpg",
+				"產品名稱": "ASUS華碩 筆記型電腦 X556UR 15.6吋",
+				"價格": "$16,800",
+				"規格": 
+					[
+						"配備USB 3.1 type-C 正反皆可插",
+						"全尺寸孤島式鍵盤(含獨立數字鍵)",
+						"ASUS Splendid 色溫校正功能",
+						"ASUS Eye Care抗藍光護眼技術",
+						"SonicMaster聲籟技術"
+					]
+			},
+			{
+				"No.": "9",
+				"img": "img/notebook/ASUSE203NA0051EN335011.6吋小筆電.jpg",
+				"產品名稱": "ASUS E203NA-0051EN3350 11.6吋小筆電",
+				"價格": "$6,790",
+				"規格": 
+					[
+						"Intel 雙核 Celeron® N3350",
+						"4G記憶體 / EMMC32G",
+						"輕薄980g"
+					]
+			}
+		]

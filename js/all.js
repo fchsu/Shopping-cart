@@ -9,9 +9,13 @@ window.addEventListener('popstate', historyPage, false);
 // 函式設定
 	// 更新畫面顯示內容
 function updated(e){
-	// let siteUrl = location.search;
+	let siteUrl = location.search;
+	if (siteUrl === ""){
+		siteUrl = '?page=phone';
+	}
+	const url = siteUrl.slice(6);
 	const xhr = new XMLHttpRequest();
-	xhr.open('GET', 'json/data.JSON', true);
+	xhr.open('GET', `json/${url}.JSON`, true);
 	xhr.onload = (e) => {
 		if (xhr.readyState === 4){
 			// if (xhrReg.status === 200){
@@ -19,7 +23,7 @@ function updated(e){
 				let vmContent = new Vue({
 					el: '#content',
 					data: {
-						product: [data.phone, data.notebook],
+						product: [data],
 						shoppingCart: JSON.parse(localStorage.getItem("shoppingCartRecord")) || [],
 						shoppingNumber: JSON.parse(localStorage.getItem("shoppingNumberRecord")) || [],
 						classStatus: {
@@ -39,6 +43,7 @@ function updated(e){
 					methods: {
 						// 點選 phone 分類更改商品顯示內容
 						clickPhone: function(e){
+							updated();
 							this.product.splice(0, 2, data.phone);
 							this.classStatus.phoneOn = true;
 							this.classStatus.notebookOn = false;
@@ -51,6 +56,7 @@ function updated(e){
 						},
 						// 點選 notebook 分類更改商品顯示內容
 						clickNotebook: function(e){
+							updated();
 							this.product.splice(0, 2, data.notebook);
 							this.classStatus.phoneOn = false;
 							this.classStatus.notebookOn = true;
